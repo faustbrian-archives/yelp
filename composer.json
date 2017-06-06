@@ -1,7 +1,7 @@
 {
     "name": "faustbrian/yelp-php-client",
     "description": "A Yelp Client for PHP",
-    "keywords": ["api", "faustbrian", "faustbrian-yelp", "yelp", "Brian Faust", "faustbrian"],
+    "keywords": ["api", "yelp", "Brian Faust", "faustbrian"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
