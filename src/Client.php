@@ -5,15 +5,15 @@ declare(strict_types=1);
 /*
  * This file is part of Yelp PHP Client.
  *
- * (c) Brian Faust <hello@brianfaust.me>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Yelp;
+namespace Plients\Yelp;
 
-use BrianFaust\Http\Http;
+use Plients\Http\Http;
 
 class Client
 {
@@ -37,7 +37,7 @@ class Client
      *
      * @param string $name
      *
-     * @return \BrianFaust\Yelp\API\AbstractAPI
+     * @return \Plients\Yelp\API\AbstractAPI
      */
     public function api(string $name): API\AbstractAPI
     {
@@ -45,7 +45,7 @@ class Client
 
         $client = Http::withBaseUri('https://api.yelp.com/v3/')->withHandler($handler->create());
 
-        $class = "BrianFaust\\Yelp\\API\\{$name}";
+        $class = "Plients\\Yelp\\API\\{$name}";
 
         return new $class($client);
     }
